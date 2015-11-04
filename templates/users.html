@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="col-lg-10"><h5 class="blog-post-title">User Management</h5></div>
+    <div class="col-lg-2 text-right"><h4 class="blog-post-title"><button type="button" class="btn btn-primary fa fa-plus" ng-click="open(user);">&nbsp;Add New User</button></div>
+</div>
+<hr/>
+<div class="table-responsive">
+<div class="panel panel-default">
+  <div class="panel-heading">List of users
+      <div class="sw-search" >
+            <div class="nav-search" id="nav-search">
+                    Filter : <span class="input-icon">
+                        <input placeholder="Filter users list ..." class="nav-search-input" ng-model="filterUser" ng-change="resetLimit();"  autocomplete="off" type="text" style="width:300px;" focus>
+                        <i class="search-icon fa fa-search nav-search-icon"></i>
+                    </span>
+            </div>
+        </div>
+    </div>
+  <div class="panel-body">
+    <table class="table table-striped table-hover table-condensed">
+    <tr ng-show="users.length==0"><td style="vertical-align:middle;"><i class="fa fa-ban fa-3x"></i>&nbsp;No data found</td></tr>
+    <tr ng-hide="users.length>-1"><td style="vertical-align:middle;"><i class="fa fa-cog fa-3x fa-spin"></i>&nbsp;Loading</td></tr>
+    
+    <tr><th ng-repeat="c in columns">{{c.text}}</th></tr>
+
+    <tr ng-repeat="c in users | filter:filterUser | orderBy:'-id'" id="{{c.id}}" animate-on-change='c.packing + c.stock + c.price + c.description' ng-animate=" 'animate'">
+        <td>{{c.id}}</td><td>{{c.name}}</td><td>{{c.price}}</td><td>{{c.stock}}</td><td>{{c.packing}}</td><td>{{c.description}}</td>
+        <td>
+            <button class="btn btn-sm" ng-class="{Active:'btn-success', Inactive:''}[c.status]" ng-click="changeUserStatus(c);">{{c.status}}</button>
+        </td>
+        <td style="width:100px">
+            <div class="btn-group">
+              <button type="button" class="btn btn-default fa fa-edit" ng-click="open(c);"></button>
+              <button type="button" class="btn btn-danger fa fa-trash-o" ng-click="deleteUser(c);"></button>
+            </div>
+        </td>
+    </tr>
+    </table>
+</div>
+</div>
+</div>
+              

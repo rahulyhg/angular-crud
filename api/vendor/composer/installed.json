@@ -87,5 +87,142 @@
             "rest",
             "router"
         ]
+    },
+    {
+        "name": "bistro/common",
+        "version": "0.1.0",
+        "version_normalized": "0.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Bistro/common.git",
+            "reference": "8ffc912a4b8b5cc8b21b5afbb5a9e1893f19e6ea"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Bistro/common/zipball/8ffc912a4b8b5cc8b21b5afbb5a9e1893f19e6ea",
+            "reference": "8ffc912a4b8b5cc8b21b5afbb5a9e1893f19e6ea",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3"
+        },
+        "time": "2013-02-20 19:17:02",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Bistro": "lib"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Dave Widmer",
+                "email": "dave@davewidmer.net",
+                "homepage": "http://www.davewidmer.net",
+                "role": "Developer"
+            }
+        ],
+        "description": "A set of common classes shared across the Bistro components",
+        "keywords": [
+            "bistro",
+            "common",
+            "shared"
+        ]
+    },
+    {
+        "name": "bistro/session",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Bistro/session.git",
+            "reference": "cebd8c77288458abde9ffdcd8efd69004a536a49"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Bistro/session/zipball/cebd8c77288458abde9ffdcd8efd69004a536a49",
+            "reference": "cebd8c77288458abde9ffdcd8efd69004a536a49",
+            "shasum": ""
+        },
+        "require": {
+            "bistro/common": "*",
+            "php": ">=5.3"
+        },
+        "time": "2013-02-20 20:04:31",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "Bistro\\Session": "lib"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Dave Widmer",
+                "email": "dave@davewidmer.net",
+                "homepage": "http://www.davewidmer.net",
+                "role": "Developer"
+            }
+        ],
+        "description": "A session abstraction library",
+        "keywords": [
+            "bistro",
+            "session"
+        ]
+    },
+    {
+        "name": "alexgarrett/violin",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/alexgarrett/violin.git",
+            "reference": "08ae247d89effe44c3e1abed58a58cf1bfa9ef60"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/alexgarrett/violin/zipball/08ae247d89effe44c3e1abed58a58cf1bfa9ef60",
+            "reference": "08ae247d89effe44c3e1abed58a58cf1bfa9ef60",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~4.5",
+            "squizlabs/php_codesniffer": "2.1.*"
+        },
+        "time": "2015-10-06 22:44:10",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Violin\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Alex Garrett",
+                "email": "alex@codecourse.com",
+                "homepage": "http://itsmealex.com"
+            }
+        ],
+        "description": "Violin is an easy to use, highly customisable PHP validator.",
+        "homepage": "https://github.com/alexgarrett/violin",
+        "keywords": [
+            "validation"
+        ]
     }
 ]

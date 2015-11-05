@@ -5,8 +5,6 @@ include_once 'config.php';
  * global $db - to use database ORM inside function
  */
 
-
-
 //      Get user information from table
 	$app->get('/users', function() { 
 	    global $db;

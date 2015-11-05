@@ -7,4 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Slim' => array($vendorDir . '/slim/slim'),
+    'Bistro\\Session' => array($vendorDir . '/bistro/session/lib'),
+    'Bistro' => array($vendorDir . '/bistro/common/lib'),
 );

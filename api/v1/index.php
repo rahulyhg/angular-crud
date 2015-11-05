@@ -2,16 +2,12 @@
 include_once 'config.php';
 /**
  * Database Helper Function templates
+ * global $db - to use database ORM inside function
  */
-/*
-select(table name, where clause as associative array)
-insert(table name, data as associative array, mandatory column names as array)
-update(table name, column names as associative array, where clause as associative array, required columns as array)
-delete(table name, where clause as array)
-*/
 
 
-// Users
+
+//      Get user information from table
 	$app->get('/users', function() { 
 	    global $db;
 	    $error['status'] =	'error';
@@ -27,7 +23,7 @@ delete(table name, where clause as array)
 	  echo json_encode($error);
 	  exit;
 	});
-
+//      Add new user to database
 	$app->post('/users', function() use ($app) { 
             global $db;
 	    $data = json_decode($app->request->getBody());
@@ -44,7 +40,7 @@ delete(table name, where clause as array)
             echo json_encode($error);
             exit;
 	});
-
+//      Edit user information
 	$app->put('/users/:id', function($id) use ($app) { 
             global $db;        
 	    $data = json_decode($app->request->getBody(),true);            
@@ -66,7 +62,7 @@ delete(table name, where clause as array)
 	    echo json_encode($error);
 	    exit;	
 	});
-        
+//      Update user information        
         $app->post('/users/update/:id', function($id) use ($app) { 
             //$data = array();   
             global $db;
@@ -88,7 +84,7 @@ delete(table name, where clause as array)
 	    echo json_encode($error);
 	    exit;	
 	});
-
+//      Delete user from database 
 	$app->delete('/users/:id', function($id) { 
 	    global $db;
 	    $product = $db->users[$id];	
